@@ -58,11 +58,12 @@ public class Student
     }
 
     /**
-     * Add some credit points to the student's accumulated credits.
+     * Add a course to a student.
      */
-    public void addCredits(int additionalPoints)
+    public void addCourse(Course course)
+   
     {
-        credits += additionalPoints;
+        this.course = course;
     }
 
     
