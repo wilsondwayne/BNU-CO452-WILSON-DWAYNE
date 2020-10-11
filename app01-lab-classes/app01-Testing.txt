@@ -1,10 +1,4 @@
-Student bob = new Student("Bob", "100");
-Course course1 = new Course("Web", "G400");
-bob.addCourse(course1);
-bob.print();
-Bob, student ID: 100, credits: 0
-bob.getCredits()
-    returned int 0
+
 LabClass c0452Lab = new LabClass(20);
 Student sam = new Student("sam", "c0452Lab");
 sam.addCredits(20);
