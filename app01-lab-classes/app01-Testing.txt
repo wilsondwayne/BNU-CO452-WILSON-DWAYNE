@@ -5,3 +5,35 @@ bob.print();
 Bob, student ID: 100, credits: 0
 bob.getCredits()
     returned int 0
+LabClass c0452Lab = new LabClass(20);
+Student sam = new Student("sam", "c0452Lab");
+sam.addCredits(20);
+c0452Lab.enrollStudent(sam);
+Student joe = new Student("Joe", "c0452Lab");
+joe.addCredits(20);
+Course computing = new Course("Computing", "c0452Lab");
+sam.addCourse(computing);
+Student hana = new Student("Hana", "c0452Lab");
+Course computing = new Course("Computing", "c0452Lab");
+joe.addCourse(computing);
+hana.addCourse(computing);
+hana.addCredits(20);
+joe.addCredits(20);
+c0452Lab.enrollStudent(joe);
+c0452Lab.enrollStudent(hana);
+c0452Lab.numberOfStudents()
+    returned int 3
+c0452Lab.setInstructor("Mr kareem long ");
+c0452Lab.setRoom("G1108");
+c0452Lab.setTime("Thursday,2pm");
+sam.print();
+sam, student ID: c0452Lab, credits: 20
+c0452Lab.setTime("Thursday,2pm");
+c0452Lab.printList();
+Lab class Thursday,2pm
+Instructor: Mr kareem long    Room: G1108
+Class list:
+sam, student ID: c0452Lab, credits: 20
+Joe, student ID: c0452Lab, credits: 40
+Hana, student ID: c0452Lab, credits: 20
+Number of students: 3
