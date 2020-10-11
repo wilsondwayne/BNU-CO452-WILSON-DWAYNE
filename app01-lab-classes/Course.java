@@ -16,13 +16,13 @@ public class Course
      */
     public Course(String title, String codeNumber)
     {
-        title = title; 
-        codeNumber = codeNumber;
+        this.title = title; 
+        this.codeNumber = codeNumber;
     }
     
     public void print ()
     {
-        System.out.println(title + ", code number: " + codeNumber);
+        System.out.println("Course: " + title + ", code number: " + codeNumber);
  
     }
 }
