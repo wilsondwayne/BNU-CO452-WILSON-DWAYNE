@@ -1,3 +1,4 @@
+ 
 /**
  * TicketMachine models a ticket machine that issues
  * flat-fare tickets.
@@ -13,33 +14,45 @@
  */
 public class TicketMachine
 {
-    // The price of a ticket from this machine.
-    private int price;
     // The amount of money entered by a customer so far.
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
     
+    private int price;
+   
+    private Ticket ticket;
+    
+    private  Ticket ticketToaylesbury;
+    
+    private Ticket ticketToamersham;
+    
+    private Ticket tickettohighwycombe;
 
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine()
     {
-        this.price = price;
         balance = 0;
         total = 0;
-       
+        createTickets();
+        
+        
     }
 
+    
     /**
-     * @Return The price of a ticket.
+     * 
      */
-    public int getPrice()
-    {
-        return price;
+    private void createTickets()
+    {ticketToamersham = new Ticket("Amersham", 300); 
+     ticketToaylesbury = new Ticket("Aylesbury", 220);  
+     tickettohighwycombe = new Ticket("High Wycombe", 330);
+    
     }
-
+    
+ 
     /**
      * Return The amount of money already inserted for the
      * next ticket.
@@ -70,7 +83,36 @@ public class TicketMachine
     {      
         
     }
-
+    
+        public void selectAmershamTicket()
+    {      
+        
+    }
+    
+        public void selectHighWycombeTicket()
+    {      
+        
+    }
+    
+    public void insert20p()
+    {
+        balance = balance + 20;
+    }
+    
+        public void insert10p()
+    {
+        balance = balance + 10;
+    }
+    
+        public void insert200()
+    {
+        balance = balance + 200;
+    }
+    
+        public void insert100()
+    {
+        balance = balance + 100;
+    } 
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
@@ -78,15 +120,12 @@ public class TicketMachine
      */
     public void printTicket()
     {
+        
+        
         if(balance >= price) 
         {
             // Simulate the printing of a ticket.
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
-            System.out.println("# " + price + " cents.");
-            System.out.println("##################");
-            System.out.println();
+
 
             // Update the total collected with the price.
             total = total + price;
@@ -112,4 +151,23 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
+    
+    
+    public void printAllTickets()
+    {
+    ticketToamersham.print();
+    ticketToaylesbury.print();
+    tickettohighwycombe.print();
+    
+    }
+  
+    public void printHeading()
+    {
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("##################");
+            System.out.println();
+    }
+    
 }
