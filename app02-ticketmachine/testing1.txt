@@ -1,0 +1,24 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.printAllTickets();
+##################
+# The BlueJ Line
+##################
+
+Ticket to Amersham cost 300p Issued; Wed Oct 28 09:40:42 GMT 2020
+Ticket to Aylesbury cost 220p Issued; Wed Oct 28 09:40:42 GMT 2020
+Ticket to High Wycombe cost 330p Issued; Wed Oct 28 09:40:42 GMT 2020
+ticketMa1.insertMoney(500);
+ticketMa1.insert200();
+you have inserted 200 pence
+current balance = 700
+ticketMa1.selectAylesburyTicket();
+ticketMa1.printTicket();
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.insertMoney(500);
+ticketMa1.selectAmershamTicket();
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+##################
+
+Ticket to Amersham cost 300p Issued; Wed Oct 28 09:43:51 GMT 2020
