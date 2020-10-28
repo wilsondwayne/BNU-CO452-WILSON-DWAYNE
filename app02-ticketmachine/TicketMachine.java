@@ -9,7 +9,7 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Modified by Student Name
+ * Modified dwayne wilson  
  */
 public class TicketMachine
 {
@@ -19,15 +19,17 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    
 
     /**
      * Create a machine that issues tickets of the given price.
      */
     public TicketMachine(int cost)
     {
-        price = cost;
+        this.price = price;
         balance = 0;
         total = 0;
+       
     }
 
     /**
@@ -62,6 +64,11 @@ public class TicketMachine
             System.out.println("Use a positive amount rather than: " +
                                amount);
         }
+    }
+    
+    public void selectAylesburyTicket()
+    {      
+        
     }
 
     /**
