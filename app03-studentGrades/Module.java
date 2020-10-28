@@ -33,7 +33,7 @@ public class Module
         }
         else
         {
-            System.out.print("Invakid mark");
+            System.out.print("Invalid mark");
         }
 
     }
