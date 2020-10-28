@@ -12,8 +12,9 @@ public class Module
     private String codeNo;
     
     private int mark;
-    
+   
     /**
+    
      * Constructor for objects of class Module
      */
     public Module(String title, String codeNo)
@@ -24,10 +25,21 @@ public class Module
 
     }
     
-    public void print()
+    public void awardMark(int mark)
     {
-        System.out.println("Module: " + codeNo +
+        if((mark >= 0) && (mark <= 100))
+        {
+        this.mark = mark;
+    }
+    else
+    {
+        System.out.print("Invakid mark");
+    }
+    
+   
+}
+ public void print()
+    {      System.out.println("Module: " + codeNo +
         " " + title + " Mark = " + mark);
     }
 
-}
