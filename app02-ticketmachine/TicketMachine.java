@@ -122,7 +122,9 @@ public class TicketMachine
 
         if(balance >= price) 
         {
-            // Simulate the printing of a ticket.
+            // Simulate the printing of a ticket.         
+            printHeading();
+            ticket.print();
 
             // Update the total collected with the price.
             total = total + price;
