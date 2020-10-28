@@ -1,4 +1,4 @@
- 
+
 /**
  * TicketMachine models a ticket machine that issues
  * flat-fare tickets.
@@ -18,16 +18,16 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-    
+
     private int price;
-   
+
     private Ticket ticket;
-    
-    private  Ticket ticketToaylesbury;
-    
-    private Ticket ticketToamersham;
-    
-    private Ticket tickettohighwycombe;
+
+    private  Ticket ticketToAylesbury;
+
+    private Ticket ticketToAmersham;
+
+    private Ticket ticketToHighWycombe;
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -37,29 +37,16 @@ public class TicketMachine
         balance = 0;
         total = 0;
         createTickets();
-        
-        
     }
 
-    
     /**
      * 
      */
     private void createTickets()
-    {ticketToamersham = new Ticket("Amersham", 300); 
-     ticketToaylesbury = new Ticket("Aylesbury", 220);  
-     tickettohighwycombe = new Ticket("High Wycombe", 330);
-    
-    }
-    
- 
-    /**
-     * Return The amount of money already inserted for the
-     * next ticket.
-     */
-    public int getBalance()
     {
-        return balance;
+        ticketToAmersham = new Ticket("Amersham", 300); 
+        ticketToAylesbury = new Ticket("Aylesbury", 220);  
+        ticketToHighWycombe = new Ticket("High Wycombe", 330);
     }
 
     /**
@@ -75,44 +62,56 @@ public class TicketMachine
         else 
         {
             System.out.println("Use a positive amount rather than: " +
-                               amount);
+                amount);
         }
     }
-    
+
     public void selectAylesburyTicket()
-    {      
-        
+    {  
+        ticket = ticketToAylesbury;
     }
-    
-        public void selectAmershamTicket()
+ 
+    public void selectAmershamTicket()
     {      
-        
+        ticket = ticketToAmersham;
     }
-    
-        public void selectHighWycombeTicket()
+
+    public void selectHighWycombeTicket()
     {      
+        ticket = ticketToHighWycombe;
+    }
+
+    public void printBalance(int amount)
+    {   
+        System.out.println("you have inserted " + amount + " pence");
+        System.out.println("current balance = " + balance);
         
     }
     
     public void insert20p()
     {
         balance = balance + 20;
-    }
-    
-        public void insert10p()
+        printBalance(20);
+    }   
+
+    public void insert10p()
     {
         balance = balance + 10;
+        printBalance(10);
     }
-    
-        public void insert200()
+
+    public void insert200()
     {
         balance = balance + 200;
+        printBalance(200);
     }
-    
-        public void insert100()
+
+    public void insert100()
     {
         balance = balance + 100;
+        printBalance(100);
     } 
+
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
@@ -120,12 +119,10 @@ public class TicketMachine
      */
     public void printTicket()
     {
-        
-        
+
         if(balance >= price) 
         {
             // Simulate the printing of a ticket.
-
 
             // Update the total collected with the price.
             total = total + price;
@@ -135,8 +132,8 @@ public class TicketMachine
         else 
         {
             System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
-                    
+                (price - balance) + " more cents.");
+
         }
     }
 
@@ -151,23 +148,23 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
-    
-    
+
     
     public void printAllTickets()
     {
-    ticketToamersham.print();
-    ticketToaylesbury.print();
-    tickettohighwycombe.print();
-    
+        printHeading(); 
+        ticketToAmersham.print();
+        ticketToAylesbury.print();
+        ticketToHighWycombe.print();
+
     }
-  
+
     public void printHeading()
     {
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("##################");
-            System.out.println();
+        System.out.println("##################");
+        System.out.println("# The BlueJ Line");
+        System.out.println("##################");
+        System.out.println();
     }
-    
+
 }
