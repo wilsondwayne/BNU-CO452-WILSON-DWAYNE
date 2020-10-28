@@ -8,13 +8,13 @@
 public class Module
 {
     private String title;
-    
+
     private String codeNo;
-    
+
     private int mark;
-   
+
     /**
-    
+
      * Constructor for objects of class Module
      */
     public Module(String title, String codeNo)
@@ -24,22 +24,25 @@ public class Module
         this.codeNo = codeNo;
 
     }
-    
+
     public void awardMark(int mark)
     {
         if((mark >= 0) && (mark <= 100))
         {
-        this.mark = mark;
+            this.mark = mark;
+        }
+        else
+        {
+            System.out.print("Invakid mark");
+        }
+
     }
-    else
-    {
-        System.out.print("Invakid mark");
-    }
-    
-   
-}
- public void print()
+
+    public void print()
     {      System.out.println("Module: " + codeNo +
-        " " + title + " Mark = " + mark);
+            " " + title + " Mark = " + mark);
+
     }
+
+}
 
