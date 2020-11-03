@@ -1,8 +1,9 @@
 
+
 /**
- * Write a description of class Course here.
+ * course class APP03 
  *
- * @author (your name)
+ * @author dwayne wilson
  * @version (a version number or a date)
  */
 public class Course
@@ -17,7 +18,7 @@ public class Course
 
     private int finalMark;
 
-    private String finalGrade;
+    private Grades finalGrade;
 
     /**
      * Constructor for objects of class Course
@@ -31,6 +32,9 @@ public class Course
         module2 = new Module("Web Development ", "C0456");
         module3 = new Module("Networking", "C0459");
         module4 = new Module("User Experience", "C0460");
+        
+        System.out.println("final mark = " + finalMark);
+        System.out.println("final grade = " + finalGrade);
 
     }
 
@@ -57,13 +61,29 @@ public class Course
     public void print ()
     {
         System.out.println("Course: " + title + ", code number: " + codeNo);
+        
         module1.print();
-
+        module2.print();
+        module3.print();
+        module4.print();
+        
+        System.out.println("final mark = " + finalMark);
+        System.out.println("final grade = " + finalGrade); 
     }
 
-    public Grades convertTograde(int mark)
+    public void calculateFinalMark()
     {
-
+        finalMark  = module1.getMark() + module2.getMark() + 
+            module3.getMark() + module4.getMark();
+            
+        finalMark = finalMark / 4;
+        finalGrade = convertTograde();
+    }
+    
+    public Grades convertTograde()
+    {
+        int mark = finalMark;
+        
         if((mark >=0) && (mark < 40))
         {
             return Grades.F;
@@ -88,7 +108,8 @@ public class Course
         return Grades.X;
     }
     
-}
+    }
+
 
     
     

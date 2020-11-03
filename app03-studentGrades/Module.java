@@ -24,7 +24,12 @@ public class Module
         this.codeNo = codeNo;
 
     }
-
+   
+    public int getMark()
+    {
+        return mark;
+    }
+   
     public void awardMark(int mark)
     {
         if((mark >= 0) && (mark <= 100))
