@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author (your name) 
+ * @author dwayne wilson 
  * @version (a version number or a date)
  */
 public class StockManager
@@ -35,8 +35,13 @@ public class StockManager
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
-    public void delivery(int id, int amount)
+    public void deliverProduct(int id, int amount)
     {
+        Product product = findProduct(id);
+        if (product != null)
+        product.deliver(amount); 
+        else
+            System.out.println("invalid product ID = " + id);
     }
     
     /**
@@ -46,6 +51,14 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
+       for(Product product : stock)
+       {
+           if(product.getID() ==id)
+           {
+               return product;
+            }
+        }
+        
         return null;
     }
     
