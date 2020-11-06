@@ -1,0 +1,54 @@
+StockManager m = new StockManager();
+StockDemo stockDem1 = new StockDemo(m);
+stockDem1.runDemo();
+
+Dwayne's Stock List
+====================
+
+101: Apple iphone 12 stock level: 0
+102: Apple iphone 8 stock level: 0
+103: Samsung Galaxy S20 stock level: 0
+104: Google Pixel 4A stock level: 0
+105: Samsung note S20 stock level: 0
+106: Apple iphone 11 stock level: 0
+107: Oneplus 8T stock level: 0
+108: Motorola Edge Plus stock level: 0
+109: Apple iphone SE stock level: 0
+110: Oppo Find X2 Pro stock level: 0
+
+Attempt to restock Google Pixel 4A with a non-positive amount: 0
+Attempt to restock Apple iphone SE with a non-positive amount: 0
+Attempt to restock Oppo Find X2 Pro with a non-positive amount: 0
+
+Dwayne's Stock List
+====================
+
+101: Apple iphone 12 stock level: 4
+102: Apple iphone 8 stock level: 3
+103: Samsung Galaxy S20 stock level: 5
+104: Google Pixel 4A stock level: 0
+105: Samsung note S20 stock level: 2
+106: Apple iphone 11 stock level: 6
+107: Oneplus 8T stock level: 6
+108: Motorola Edge Plus stock level: 2
+109: Apple iphone SE stock level: 0
+110: Oppo Find X2 Pro stock level: 0
+
+Attempt to sell an out of stock item: Google Pixel 4A
+Attempt to sell an out of stock item: Apple iphone SE
+Attempt to sell an out of stock item: Oppo Find X2 Pro
+
+Dwayne's Stock List
+====================
+
+101: Apple iphone 12 stock level: 3
+102: Apple iphone 8 stock level: 2
+103: Samsung Galaxy S20 stock level: 4
+104: Google Pixel 4A stock level: 0
+105: Samsung note S20 stock level: 1
+106: Apple iphone 11 stock level: 5
+107: Oneplus 8T stock level: 5
+108: Motorola Edge Plus stock level: 1
+109: Apple iphone SE stock level: 0
+110: Oppo Find X2 Pro stock level: 0
+
