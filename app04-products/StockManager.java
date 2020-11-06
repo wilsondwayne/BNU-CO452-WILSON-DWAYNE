@@ -38,12 +38,34 @@ public class StockManager
     public void deliverProduct(int id, int amount)
     {
         Product product = findProduct(id);
+        
         if (product != null)
-        product.deliver(amount); 
+            product.deliver(amount); 
         else
             System.out.println("invalid product ID = " + id);
     }
     
+    /**
+     * sell one of the given item.
+     * show before and after status of the product
+     * @param id The ID of the product being sold
+     */
+    public void sellProduct(int id, int amount)
+    {
+     Product product = findProduct(id);
+        
+     if(product != null)
+     {
+         printProduct(id);
+         
+         // to be changed
+         product.sellOne();
+         
+         printProduct(id);
+        }
+    }
+
+
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
@@ -77,7 +99,32 @@ public class StockManager
     /**
      * Print details of all the products.
      */
-    public void printProductDetails()
+    public void printProduct(int id)
     {
+        //System.out.println(product);
+    }
+    
+    /**
+     * Print out each product in the stock
+     * in the order they are in the stock list
+     */
+    public void printAllProducts()
+    {
+        printHeading();
+        
+        for(Product product : stock)
+        {
+            System.out.println(product);
+        }
+
+        System.out.println();
+    }
+    
+    public void printHeading()
+    {
+        System.out.println();
+        System.out.println("Dwayne's Stock List");
+        System.out.println("====================");
+        System.out.println();
     }
 }
