@@ -33,7 +33,12 @@ public class Product
     {
         return id;
     }
-
+    
+    public void setName(String replacementName)
+    {
+        name = replacementName;
+    }
+    
     /**
      * @return The product's name.
      */
@@ -57,7 +62,12 @@ public class Product
     {
         return id + ": " +  name + " stock level: " + quantity;
     }
-
+    
+    public void increaseQuantity(int amount)
+    {
+        quantity = quantity + amount ;
+    }
+    
     /**
      * Restock with the given amount of this product.
      * The current quantity is incremented by the given amount.
@@ -93,4 +103,28 @@ public class Product
                 "Attempt to sell an out of stock item: " + name);
         }
     }
+    
+    /**
+     * Sell one of these products.
+     * An error is reported if there appears to be no stock.
+     */
+    public void sell(int amount)
+    {
+        if(quantity > 0) 
+        {
+            if(amount < quantity)
+            {
+                quantity -= amount;
+            }
+            else
+            {
+                quantity = 0;
+            }
+        }
+        else 
+        {
+            System.out.println(
+                "Attempt to sell an out of stock item: " + name);
+        }
+    }    
 }

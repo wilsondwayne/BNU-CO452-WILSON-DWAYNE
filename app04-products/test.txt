@@ -1,0 +1,199 @@
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+110: Oppo Find X2 Pro stock level: 6
+
+Dwayne's Stock List
+====================
+
+101: Apple iphone 12 stock level: 12
+102: Apple iphone 8 stock level: 6
+103: Samsung Galaxy S20 stock level: 10
+104: Google Pixel 4A stock level: 8
+105: Samsung note S20 stock level: 12
+106: Apple iphone 11 stock level: 4
+107: Oneplus 8T stock level: 12
+108: Motorola Edge Plus stock level: 14
+109: Apple iphone SE stock level: 14
+110: Oppo Find X2 Pro stock level: 12
+
+Available stock :12
+101: Apple iphone 12 stock level: 6
+ product not found on the database
+Available stock :6
+102: Apple iphone 8 stock level: 0
+ product not found on the database
+ product not found on the database
+Available stock :10
+103: Samsung Galaxy S20 stock level: 4
+ product not found on the database
+ product not found on the database
+ product not found on the database
+Available stock :8
+104: Google Pixel 4A stock level: 7
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+Available stock :12
+105: Samsung note S20 stock level: 6
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+Available stock :4
+106: Apple iphone 11 stock level: 0
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+Available stock :12
+107: Oneplus 8T stock level: 12
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+Available stock :14
+108: Motorola Edge Plus stock level: 14
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+Available stock :14
+109: Apple iphone SE stock level: 13
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+Available stock :12
+110: Oppo Find X2 Pro stock level: 8
+
+Dwayne's Stock List
+====================
+
+101: Apple iphone 12 stock level: 6
+102: Apple iphone 8 stock level: 0
+103: Samsung Galaxy S20 stock level: 4
+104: Google Pixel 4A stock level: 7
+105: Samsung note S20 stock level: 6
+106: Apple iphone 11 stock level: 0
+107: Oneplus 8T stock level: 12
+108: Motorola Edge Plus stock level: 14
+109: Apple iphone SE stock level: 13
+110: Oppo Find X2 Pro stock level: 8
+
+dwayne.printAllProducts();
+
+Dwayne's Stock List
+====================
+
+101: Apple iphone 12 stock level: 6
+102: Apple iphone 8 stock level: 0
+103: Samsung Galaxy S20 stock level: 4
+104: Google Pixel 4A stock level: 7
+105: Samsung note S20 stock level: 6
+106: Apple iphone 11 stock level: 0
+107: Oneplus 8T stock level: 12
+108: Motorola Edge Plus stock level: 14
+109: Apple iphone SE stock level: 13
+110: Oppo Find X2 Pro stock level: 8
+
+dwayne.printHeading();
+
+Dwayne's Stock List
+====================
+
+dwayne.numberInStock(7);
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ the system does not find the product
+dwayne.findProduct(13)
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+    returned Object null
+dwayne.deliverProduct(101, 4);
+101: Apple iphone 12 stock level: 10
+dwayne.sellProduct(105, 3);
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+Available stock :6
+105: Samsung note S20 stock level: 3
+dwayne.sellOne(109);
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+109: Apple iphone SE stock level: 13
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+109: Apple iphone SE stock level: 12
+dwayne.printLowStock();
+102: Apple iphone 8 stock level: 0
+106: Apple iphone 11 stock level: 0
+dwayne.findProduct(104)
+ product not found on the database
+ product not found on the database
+ product not found on the database
+    returned Object <object reference>
+dwayne.numberInStock(106);
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ the stock quantity is :0
