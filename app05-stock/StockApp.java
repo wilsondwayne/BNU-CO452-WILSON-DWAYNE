@@ -1,23 +1,31 @@
-
 /**
  * This app provides a user interface to the
  * stock manager so that users can add, edit,
  * print and remove stock products
  *
- * @author Student Name
+ * @dwayne wilson
  * @version 0.1
  */
 public class StockApp
 {
+    public final int FIRST_ID = 200;
     // Use to get user input
     private InputReader input;
-    
+
+    private StockManager manager;
+
+    private StockDemo demo;
+
+    private int nextID = FIRST_ID;
+
     /**
      * Constructor for objects of class StockApp
      */
     public StockApp()
     {
         input = new InputReader();
+        manager = new StockManager();
+        demo = new StockDemo(manager);  
     }
 
     /**
@@ -25,28 +33,85 @@ public class StockApp
      */
     public void run()
     {
-        printHeading();
-        getMenuChoice();
-    }
-    
-    /**
-     * 
-     */
-    public void getMenuChoice()
-    {
         boolean finished = false;
-        
+
         while(!finished)
         {
             printHeading();
             printMenuChoices();
-           
+
             String choice = input.getInput();
-            finished = true;
+            choice = choice.toLowerCase();
+            exeuteMenuChoice(choice);
+            if(choice.equals("quit"))
+            {
+                finished = true;
+            }
+            else
+            {
+                exeuteMenuChoice(choice);
+            }
+        }   
+    }
+
+    private void exeuteMenuChoice(String choice)
+    {
+        if(choice.equals("add"))
+        {
+            addProduct();
+        }
+        else if (choice.equals("remove"))
+        {
+          removeProduct();
+        }
+        
+        else if (choice.equals("printall"))
+        {
+            printAllProducts();
         }
     }
-    
+
+    /**
+     * this method allows the user to add a product of their choice 
+     */
+    private void addProduct()
+    {
+        System.out.println("\nAdding a new product!\n");
+        System.out.println();
+        
+        System.out.println("please enter the product ID");
+        String value = input.getInput();
+        
+
+        System.out.println("Please enter the product name ");
+        String name = input.getInput();
+
+        Product product = new Product(nextID, name);
+        manager.addProduct(product);
+
+        System.out.println("Added a new product " + product);
+        System.out.println("\nAdded " + product + " to the stock\n");
+        nextID++;
+    }
+
    
+    
+
+    /**
+     * this method allows the user to remove a product of thier choice
+     */
+    private void removeProduct()
+    {
+        System.out.println("Remove an old product"); 
+        System.out.println();
+        
+        System.out.println("Please enter the id of the products ");
+        String number = input.getInput();
+        
+        int id = Integer.parseInt(number);
+        manager.removeProduct(id);
+    }
+
     /**
      * Print out a menu of operation choices
      */
@@ -57,7 +122,15 @@ public class StockApp
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    PrintAll:   Print all products");
         System.out.println("    Quit:       Quit the program");
-        System.out.println();        
+        System.out.println();             
+    }
+    
+     /**
+     * this method allows the user to print out all of the stock 
+     */
+    public void printAllProducts()
+    {
+        manager.printAllProducts();
     }
     
     /**
@@ -67,7 +140,7 @@ public class StockApp
     {
         System.out.println("******************************");
         System.out.println(" Stock Management Application ");
-        System.out.println("    App05: by Student Name");
+        System.out.println("    App05: by Dwayne Wilson");
         System.out.println("******************************");
     }
 }
