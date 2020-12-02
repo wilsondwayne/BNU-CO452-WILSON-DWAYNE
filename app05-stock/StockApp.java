@@ -8,7 +8,7 @@
  */
 public class StockApp
 {
-    public final int FIRST_ID = 200;
+    public final int FIRST_ID = 111;
     // Use to get user input
     private InputReader input;
 
@@ -26,6 +26,7 @@ public class StockApp
         input = new InputReader();
         manager = new StockManager();
         demo = new StockDemo(manager);  
+        sellProduct();
     }
 
     /**
@@ -40,9 +41,9 @@ public class StockApp
             printHeading();
             printMenuChoices();
 
-            String choice = input.getInput();
+            String choice = input.getString("Please enter your choice");
             choice = choice.toLowerCase();
-            exeuteMenuChoice(choice);
+
             if(choice.equals("quit"))
             {
                 finished = true;
@@ -62,15 +63,27 @@ public class StockApp
         }
         else if (choice.equals("remove"))
         {
-          removeProduct();
+            removeProduct();
         }
-        
+
         else if (choice.equals("printall"))
         {
             printAllProducts();
         }
+        else if (choice.equals("sell"))
+        {
+            sellProduct();
+        }
+        else if (choice.equals("print low stock"))
+        {
+            
+        }
+        
+        
+       
     }
 
+      
     /**
      * this method allows the user to add a product of their choice 
      */
@@ -78,24 +91,17 @@ public class StockApp
     {
         System.out.println("\nAdding a new product!\n");
         System.out.println();
-        
-        System.out.println("please enter the product ID");
-        String value = input.getInput();
-        
 
-        System.out.println("Please enter the product name ");
-        String name = input.getInput();
+        String name = input.getString("Please enter the product name ");
 
         Product product = new Product(nextID, name);
         manager.addProduct(product);
 
         System.out.println("Added a new product " + product);
         System.out.println("\nAdded " + product + " to the stock\n");
+
         nextID++;
     }
-
-   
-    
 
     /**
      * this method allows the user to remove a product of thier choice
@@ -104,12 +110,25 @@ public class StockApp
     {
         System.out.println("Remove an old product"); 
         System.out.println();
-        
-        System.out.println("Please enter the id of the products ");
-        String number = input.getInput();
-        
-        int id = Integer.parseInt(number);
+
+        int id = input.getInt("Please enter the id of the products ");
+
         manager.removeProduct(id);
+    }
+
+    /**
+     * this method allows the user to remove a product of thier choice
+     */
+    private void sellProduct()
+    {
+        System.out.println("Sell an old product"); 
+        System.out.println();
+
+        int id = input.getInt("Please enter the id of the product ");
+
+        int quantity = input.getInt("Please enter the quantity of the product ");
+
+        manager.sellProduct(id, quantity);
     }
 
     /**
@@ -124,15 +143,15 @@ public class StockApp
         System.out.println("    Quit:       Quit the program");
         System.out.println();             
     }
-    
-     /**
+
+    /**
      * this method allows the user to print out all of the stock 
      */
     public void printAllProducts()
     {
         manager.printAllProducts();
     }
-    
+
     /**
      * Print the title of the program and the authors name
      */

@@ -8,6 +8,7 @@
 public class Program
 {
     private static StockApp app;
+     
 
     /**
      * This class creates and runs an instance of

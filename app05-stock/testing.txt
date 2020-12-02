@@ -1,0 +1,199 @@
+product not found
+******************************
+ Stock Management Application 
+    App05: by Dwayne Wilson
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+Please enter your choice > 
+remove
+Remove an old product
+
+Please enter the id of the products  > 
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ Product not found in the stock
+******************************
+ Stock Management Application 
+    App05: by Dwayne Wilson
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+Please enter your choice > 
+remove
+Remove an old product
+
+Please enter the id of the products  > 
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ Product not found in the stock
+******************************
+ Stock Management Application 
+    App05: by Dwayne Wilson
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+Please enter your choice > 
+quit
+Program.main();
+Sell an old product
+
+Please enter the id of the product  > 
+Please enter the quantity of the product  > 
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+product not found
+******************************
+ Stock Management Application 
+    App05: by Dwayne Wilson
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+Please enter your choice > 
+remove
+Remove an old product
+
+Please enter the id of the products  > 
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ Product not found in the stock
+******************************
+ Stock Management Application 
+    App05: by Dwayne Wilson
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+Please enter your choice > 
+quit
+Program.main();
+Sell an old product
+
+Please enter the id of the product  > 
+112
+Please enter the quantity of the product  > 
+2
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+product not found
+******************************
+ Stock Management Application 
+    App05: by Dwayne Wilson
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+Please enter your choice > 
+******************************
+ Stock Management Application 
+    App05: by Dwayne Wilson
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+Please enter your choice > 
+sell
+Sell an old product
+
+Please enter the id of the product  > 
+112
+Please enter the quantity of the product  > 
+10
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+ product not found on the database
+product not found
+******************************
+ Stock Management Application 
+    App05: by Dwayne Wilson
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+Please enter your choice > 
+******************************
+ Stock Management Application 
+    App05: by Dwayne Wilson
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+Please enter your choice > 

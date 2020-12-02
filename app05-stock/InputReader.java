@@ -25,11 +25,31 @@ public class InputReader
      *
      * @return  A String typed by the user.
      */
-    public String getInput()
+    public String getString(String prompt)
     {
-        System.out.print("> ");         // print prompt
+        System.out.println(prompt + " > ");         // print prompt
         String inputLine = reader.nextLine();
 
         return inputLine;
+    }
+    
+    public int getInt(String prompt)
+    {
+        boolean isValid = false;
+        int number = 0;
+        
+        while(isValid == false)
+        {
+            System.out.println(prompt + " > ");         // print prompt
+            //number = reader.nextInt();
+            
+            if(number < 0)
+            {
+                System.out.println("Invlaid number less than 0");
+            }
+            else isValid = true;
+        }
+        
+        return number;
     }
 }

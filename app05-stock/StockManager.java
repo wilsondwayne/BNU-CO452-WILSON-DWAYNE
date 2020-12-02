@@ -34,7 +34,8 @@ public class StockManager
 
     public void chnageProductName(int id, String replacement) 
     {
-        {Product product = findProduct(id);
+        {
+            Product product = findProduct(id);
             if(product != null)
             {
                 product.setName(replacement);
@@ -53,6 +54,7 @@ public class StockManager
     public void removeProduct(int id)
     {
         Product product = findProduct(id);
+        
         if(product != null)
         {
             stock.remove(product);
@@ -60,7 +62,7 @@ public class StockManager
         }
         else
         {
-            System.out.println(" Product not found on the database");
+            System.out.println(" Product not found in the stock");
         }
     }
 
@@ -69,12 +71,17 @@ public class StockManager
      */
     public void printLowStock()
     {
+        System.out.println("\n Print out low stock!\n");
         for(Product stocks : stock)
         {
+            
+            int id =101;
             if (stocks.getQuantity() < 2) 
             {
-                System.out.println(stocks);
+                System.out.println("Alert! Low Stock");
+                
             }
+            
         }
     }
 
@@ -102,25 +109,8 @@ public class StockManager
         }
 
     }
-    
-    /**
-     * this method removes the  product
-     */
-    public void removeProducts(int id)
-    {
-        Product product = findProduct(id);
-        
-        if (product != null)
-        {
-            System.out.println("\nProduct " + product + " removed!\n");
-            stock.remove(product);
-        }
-        else
-          System.out.println("Invalid Product ID = " +id);
-    }
-    
-    
-    
+
+
     /**
      * sell one of the given item.
      * show before and after status of the product
@@ -133,8 +123,7 @@ public class StockManager
         if(product != null)
         {
             printProduct(id);
-
-            // to be changed
+            
             product.sellOne();
 
             printProduct(id);
@@ -161,6 +150,23 @@ public class StockManager
         }
 
         return null;
+    }
+
+    /**
+     * sends a smessage letting the user know that there is a duplicate 
+     */
+    public boolean isDuplicateID(int id)
+    {
+        for(Product product : stock)
+        {
+            if(product.getID() ==id)
+            {
+                return true;
+            }
+
+        }
+        return false;
+
     }
 
     /**
@@ -191,7 +197,11 @@ public class StockManager
         }
 
     }
+    
+  
 
+    
+    
     /**This method finds products from stock and sells it to customers
      * 
      */
